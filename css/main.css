@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+    background-color: #5bbad5;
+}
+img {
+    width: 100px;
+    height: 30px;
+    background-color: #ff00ae;
+}
+
+nav {
+
+}
+
+a {
+
+}
+
