@@ -3,18 +3,63 @@ body {
 }
 
 header {
+    display: inline-block;
     width: 1000px;
     margin-left: calc(50% - 500px);
     background-color: #5bbad5;
+    margin-top: 30px;
 }
-img {
-    width: 100px;
+/* logo */
+
+header > img {
+    width: 100px; 
     height: 30px;
-    background-color: #ff00ae;
+    background-color: #ff003c;
+    float: left;
+    margin-top: 5px;
+}
+
+div {
+    float: right;
 }
 
 nav {
-    width: 100px;
-    height: 30px;
-    background-color: #ff00ae;
+    float: left;
+    margin-top: 9px;
+    margin-right: 30px;
+}
+
+
+a {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+}
+
+a:last-child {
+    margin-right: 0px;
+    color: orange;
+}
+/*
+a:first-child {
+ text-transform: uppercase;   
+}
+
+a:nth-child(2n) {
+    background-color: aqua;   
+   }
+   
+
+a:nth-last-child(2)  {
+    background-color: violet;
+}
+*/
+/* user_photo */
+
+div > img {
+width: 40px;
+height: 40px;
+background-color: #ff003c;
+float: right;
+border-radius: 50px;
 }
