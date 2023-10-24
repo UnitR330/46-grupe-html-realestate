@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -13,20 +14,21 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header class="main-header">
         <img class="logo" src="./img/logo.png" alt="Logo">
+
         <div class="main-header-right-side">
             <nav class="main-menu">
                 <a class="menu-link" href="#">Buy</a>
                 <a class="menu-link" href="#">Rent</a>
                 <a class="menu-link" href="#">Agent</a>
-                <a class="menu-link" href="#">User</a>
+                <a class="menu-link" href="#"><span>About</span> our team</a>
             </nav>
-            <img class="user-photo" src="./img/user_photo.png" alt="User avatar">
+
+            <img class="user-avatar" src="./img/user_photo.png" alt="User avatar">
         </div>
     </header>
 
@@ -41,7 +43,7 @@
                     </div>
                     <div>
                         <input type="text">
-                        <button type="button">Submit</button>
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -49,110 +51,73 @@
 
         <section class="neighborhood">
             <div class="section-title">
-                <h2 class="title">Best neighborhood</h2>
-                <p class="description">Find best accomodation for you</p>
+                <h2 class="title">Top neighborhood</h2>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>
             <div class="neighborhood-listing">
                 <div class="listing-item">
-                    <img class="item-image" src="./img/1.jpg" alt="House1">
-                    <div class="item-size">€1862 / m²</div>
+                    <img class="item-image" src="./img/3.webp" alt="House">
+                    <div class="item-size">$1862 / Sq. Ft.</div>
                     <div class="item-details">
                         <p class="location">ICON + New York, NY</p>
                         <p class="name">Carroll Gardens</p>
                     </div>
                 </div>
                 <div class="listing-item">
-                    <img class="item-image" src="./img/2.jpg" alt="House2">
-                    <div class="item-size">€1200 / m²</div>
+                    <img class="item-image" src="./img/2.jpg" alt="House">
+                    <div class="item-size">$1862 / Sq. Ft.</div>
                     <div class="item-details">
-                        <p class="location">ICON + California, Ca</p>
-                        <p class="name">Napa Countyurg</p>
+                        <p class="location">ICON + New York, NY</p>
+                        <p class="name">Carroll Gardens</p>
                     </div>
                 </div>
                 <div class="listing-item last-item">
-                    <img class="item-image" src="./img/3.webp" alt="House3">
-                    <div class="item-size">€1650 / m²</div>
+                    <img class="item-image" src="./img/1.jpg" alt="House">
+                    <div class="item-size">$1862 / Sq. Ft.</div>
                     <div class="item-details">
-                        <p class="location">ICON + Chicago, IL</p>
-                        <p class="name">Murray Hill</p>
+                        <p class="location">ICON + New York, NY</p>
+                        <p class="name">Carroll Gardens</p>
                     </div>
                 </div>
-                <a class="button-see-all" href="#">See all</a>
+                <a href="#">See all</a>
             </div>
         </section>
 
         <section class="recommended">
-            <div class="recommended-title">
-                <h2 class ="recommended">Recommended for you</h2>
-                <p class="offer">Here the best offer ever!</p>
+            <div class="section-title">
+                <h2 class="title">Recommended for you</h2>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>
-            
-                
-                <div id="conteiner1" class="recommended-content">
-                    <img class="house-image2" src="./img/13.webp" alt="House4">
+            <div class="recommended-listing">
+                <div>
+                    <img src="#" alt="House">
                     <div>
-                        <p3>€ 123,456</p3>
-                        <p4>121 Street</p4>
-                        <p5>Vilnius, Lietuva, 12345</p5>
+                        <p>$123,456</p>
+                        <p>121 Gatves g.</p>
+                        <p>Miestas, Salis, 12345</p>
                         <div>
-                            <p6><i class="fa fa-tint fa-fw"></i>1 baths</p6>
-                            <p7><i class="fa fa-bed fa-fw"></i> 3 beds</p7>
-                            <p8><i class="fa fa-arrows fa-fw"></i>200m²</p8>
+                            <p>ICON + 2 Baths</p>
+                            <p>ICON + 2 Baths</p>
+                            <p>ICON + 2 Baths</p>
                         </div>
                     </div>
                 </div>
-                <div id="conteiner2" class="recommended-content">
-                    <img class="house-image2" src="./img/12.webp" alt="House5">
+                <div>
+                    <img src="#" alt="House">
                     <div>
-                        <p3>€ 123,456</p3>
-                        <p4>121 Street</p4>
-                        <p5>Vilnius, Lietuva, 12345</p5>
+                        <p>$123,456</p>
+                        <p>121 Gatves g.</p>
+                        <p>Miestas, Salis, 12345</p>
                         <div>
-                            <p6><i class="fa fa-tint fa-fw"></i>2 baths</p6>
-                            <p7><i class="fa fa-bed fa-fw"></i>4 beds</p7>
-                            <p8><i class="fa fa-arrows fa-fw"></i>370m²</p8>
+                            <div>ICON + 2 Baths</div>
+                            <div>ICON + 2 Baths</div>
+                            <div>ICON + 2 Baths</div>
                         </div>
                     </div>
                 </div>
-              
-    
+            </div>
         </section>
     </main>
 </body>
 
 </html>
-<!---
-   <table class="recommended-table">
-       <tr>
-         <td>
-           <img class="house-image2" src="./img/4.jpg" alt="House4">
-         </td>
-         <td>
-           <p>$123,4cccccc56</p>
-           <p>121 Street</p>
-           <p>Vilnius, Lietuva, 12345</p>
-           <div>
-             <p>ICON + baths ></p>
-             <p>ICON + 2 baths></p>
-             <p>icon + bATH</p>
-           </div>
-         </td>
-       </tr>
-       <tr>
-         <td>
-           <img class="house-image2" src="./img/5.webp" alt="House5">
-         </td>
-         <td>
-           <p>$123,456</p>
-           <p>121 Street</p>
-           <p>Vilnius, Lietuva, 12345</p>
-           <div>
-             <p>ICON + baths ></p>
-             <p>ICON + 2 baths></p>
-             <p>icon + bATH</p>
-           </div>
-         </td>
-       </tr>
-     </table>
-     
----->

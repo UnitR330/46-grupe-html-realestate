@@ -104,47 +104,90 @@ main {
     .main-title {
         margin-bottom: 30px;
     }
-
-
-.neighborhood {
-    width: 65%;
-    float: left;
-    padding: 0;
-    margin-right: 0px;
-    /* background-color: rgb(227, 227, 249);*/
-    border-radius: 25px;
+    
+    
+    .neighborhood {
+        width: 65%;
+        float: left;
+        margin-right: 30px;
+        background-color: aqua;
+        border-radius: 25px;
 }
 
-.neighborhood-title {
+.section-title {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.section-title > .title {
     font-family:'Courier New', Courier, monospace
     
 }
+.section-title > .description {
+}
 
-.neighborhood-content {
+
+.neighborhood-listing {
+    width: 100%; 
+}
+
+.neighborhood-listing > .listing-item {
+    width: calc((100% - 2 * 30px) / 3);
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left; 
+    background-color: pink;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+.neighborhood-listing > .listing-item.last-item {
+    margin-right: 0;
+}
+
+.neighborhood-listing .item-image {
     width: 100%;
-    min-height: 280px;
-    padding: 0;
-    margin-bottom: 0px;
-    display: flex;    
+    height: 250px;
+    object-position: center;
+    object-fit: cover;
 }
 
-.neighborhood-container {
-width: 200px;
-height: 200px;
-overflow: hidden;
-position: relative; 
-margin-right: 20px;
-margin-top: 20px;
-     
+.neighborhood-listing .item-size {
+background-color: #889ef9;
+position: absolute;
+right: 0;
+top: 0;
+padding: 5px 10px;
+backdrop-filter: blur(3px);
+width: 80%;
+height: 20%; 
+border-radius: 0 0 0 20px;
+
+}
+.neighborhood-listing .item-details {
+position: absolute;
+bottom: 15px;
+right: 15px;
+padding: 5px 10px;
+backdrop-filter: blur(3px);
+border-radius: 15px;
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3px);
 }
 
-.neighborhood-container-last {
-width: 200px;
-height: 150px;
-overflow: hidden;
-position: relative; 
-margin-right: 20px;
-margin-top: 20px;
+.neighborhood-listing .location {
+
+}
+.neighborhood-listing .name {
+}
+
+/*
+.neighborhood-listing >.listing-item:nth-child(3) {
+.neighborhood-listing >.listing-item:nth-child(3n) {
+.neighborhood-listing >.listing-item:nth-last-child(2) {
+margin-right: 0;
+
      
 }
 .house-image1 {
@@ -158,7 +201,7 @@ margin-top: 20px;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(134, 213, 250, 0.7); /* Полупрозрачный фон */
+    background-color: rgba(134, 213, 250, 0.7);
     width: 40%;
     padding: 10px;
     box-sizing: border-box;
@@ -173,7 +216,7 @@ margin-top: 20px;
     position: absolute;
     bottom: 10px;
     left: 19px;
-    background-color: rgba(255, 255, 255, 0.75); /* Полупрозрачный фон */
+    background-color: rgba(255, 255, 255, 0.75); 
     width: 80%;
     height: 40px;
     padding: 2px;
@@ -193,13 +236,12 @@ margin-top: 20px;
       margin-left: 10px;
       font-weight: 600;
     }
-    
+    */
     .button-see-all {
         background-color: #FF9376;
         color: white;
         padding: 1em 1.5em;
         text-decoration: none;
-        display: flex;
         justify-content: center;
         align-items: center;
         height: 40px;
@@ -211,24 +253,35 @@ margin-top: 20px;
     }
     
     .recommended {
-        width: calc(35% - 15px);
+        width: calc(33% - 15px);
         float: right;
+        position:relative;
         padding: 0px;
         background-color: none;
         min-height: 280px;
     }
     
     .recommended-title {
+        width: 100%;
+        margin-bottom: 20px;
         font-family:'Courier New', Courier, monospace
     }
+
+    .recommended-title > .recommended {
+        font-family:'Courier New', Courier, monospace
+    }
+    .recommended-title > .offer {
+
+    }
     
+
     .recommended-content {
     width: 100%;
-    min-height: 120px;
+    min-height: 140px;
     padding: 10px;
+    float: left;
     margin-bottom: 10px;
     margin-top: 20px;
-    display: flex;
     border: 1px solid;
     border-color: rgb(231, 231, 231);
     border-radius: 10px;
@@ -236,18 +289,16 @@ margin-top: 20px;
         
 }
 
-#container1,
-#container2 {
-         
-}
+
 
 
 .house-image2 {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     border-radius: 15px;
     margin-right: 10px;
-    object-fit:cover;
+    object-fit: cover;
+    
     
 }
 
