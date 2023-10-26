@@ -13,9 +13,8 @@ body {
 
 .main-header {
     display: inline-block;
-    width: 1200px;
-    margin-top: 20px;
-    margin-left: calc(50% - 600px);
+    width: 1200px;    
+    margin: 20px calc(50% - 600px) 0;
 }
 
 .logo {
@@ -55,7 +54,7 @@ body {
 
 .user-avatar {
     width: 40px;
-    height: 40px;
+    height: 30px;
     float: right;
     border-radius: 50%;
     cursor: pointer;
@@ -65,8 +64,7 @@ body {
 main {
     display: inline-block;
     width: 1200px;
-    margin-top: 20px;
-    margin-left: calc(50% - 600px);
+    margin: 20px calc(50% - 600px) 40px;
 }
 
 .hero {
@@ -90,16 +88,15 @@ main {
 }
 
 .neighborhood {
-    width: 65%;
+    width: 60%;
     float: left;
     margin-right: 30px;
-    background-color: aqua;
+    
 }
 
 .recommended {
-    width: calc(35% - 30px);
+    width: calc(40% - 30px);
     float: right;
-    background-color: tomato;
 }
 
 .section-title {
@@ -156,3 +153,76 @@ main {
 }
 .neighborhood-listing .name {
 }
+
+.recommended-listing {
+    width: 100%;
+}
+.recommended-listing > .listing-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+
+}
+.recommended-listing > .listing-item:last-child {
+    margin-bottom: 20px;
+
+}
+.recommended-listing .item-image {
+    width: 25%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+.recommended-listing .item-details {
+    display: flex;
+     flex-direction: column;
+     gap: 5px;
+     width: calc(75% - 40px);
+}
+.recommended-listing .item-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+.recommended-listing .location-street {
+    font-size: 18px;
+}
+.recommended-listing .location-city {
+    font-size: 16px;
+}
+.recommended-listing .item-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    font-size: 14px;
+}
+.recommended-listing .feature {
+    float: left;
+    margin-right: 15px;
+}
+
+.recommended-listing .bookmark {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 30px;
+    color: red;
+}
+
+/*
+.recommended-listing > .feature:last-child {
+    float: left;
+    margin-right: 15px;
+}  
+
+font-family: 'font-awesome';
+src: url('../fonts/fontawesome-webfont.eot')
+*/
