@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="font" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 
 <body>
@@ -37,14 +37,16 @@
         <section class="hero">
             <div class="hero-content">
                 <h1 class="main-title">We help you find your dream home.</h1>
-                <form>
-                    <div>
-                        <button type="button">Buy</button>
-                        <button type="button">Rent</button>
+                <form class="form">
+                    <div class="filter">
+                        <button class="filter-btn active" type="button">Buy</button>
+                        <button class="filter-btn" type="button">Rent</button>
                     </div>
-                    <div>
-                        <input type="text">
-                        <button type="submit">Submit</button>
+                    <div class="search">
+                        <label class="label" for="search-address">Search for city, neighborhood, zip code</label>
+                        <input id="search-address" class="input" placeholder="Search here">
+                        <button class="search-btn"type="button">Submit</button>
+                        
                     </div>
                 </form>
             </div>
@@ -80,14 +82,14 @@
                         <p class="name">Carroll Gardens</p>
                     </div>
                 </div>
-                <a href="#">See all</a>
+                <a class="btn" href="#">See all</a>
             </div>
         </section>
 
         <section class="recommended">
             <div class="section-title">
                 <h2 class="title">Recommended for you</h2>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                <p class="description">Search and find!</p>
             </div>
             <div class="recommended-listing">
                 <div class="listing-item">
@@ -102,6 +104,10 @@
                             <p class="feature"><i class="fa fa-object-group" aria-hidden="true"></i>trecias</p>
                         </div>
                     </div>
+                    <div class="bookmark active">
+                        <div class="fa fa-bookmark-o"></div>
+                        <div class="fa fa-bookmark"></div>
+                    </div>
                 </div>
                 <div class="listing-item">
                     <img class="item-image" src="./img/5.webp" alt="House">
@@ -115,7 +121,10 @@
                             <p class="feature"><i class="fa fa-select" aria-hidden="true"></i>2 Baths</p>
                         </div>
                     </div>
-                    <div class="fa fa-bookmark bookmark"></div>
+                    <div class="bookmark">
+                        <div class="fa fa-bookmark-o"></div>
+                        <div class="fa fa-bookmark"></div>
+                    </div>
                 </div>
             </div>
         </section>
