@@ -54,7 +54,7 @@ body {
 
 .user-avatar {
     width: 40px;
-    height: 30px;
+    height: 40px;
     float: right;
     border-radius: 50%;
     cursor: pointer;
@@ -86,34 +86,76 @@ main {
 .main-title {
     margin-bottom: 30px;
 }
+
+
 .form {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+
+.form > .filter {
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #fff;
+}
+.form .filter-btn {
+    padding: 8px 35px;
+    background-color: #fff;
+    color: #8080ff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.form >.filter {
+.form .filter-btn:hover {
+    box-shadow: 0 2px 8px #88f8;
+}
+.form .filter-btn.active {
+    background-color: #8080ff;
+    color: #fff;
+}
+
+.form > .search {
     display: flex;
-    gap: 5px
-
-
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
 }
 
-.form > filter-btn {
-cursor: pointer;
+.form .label {
+    display: none;
 }
-
-.form > filter-btn:hover {
-    box-shadow: 0 2px 8px #36f;
-}
-
-.form > filter-btn.bookmark.active {
-
-}
-
-.form > input {
-
+.form .input {
+    width: 0;
+    padding: 15px 0;
     font-size: 20px;
+    flex-grow: 1;
+    border: none;
+}
+::placeholder {
+    color: red;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.form .search-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #ff9376;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #ff9376;
+    box-shadow: 0 4px 8px rgba(255, 147, 118, 0.27);
 }
 
 
@@ -123,16 +165,13 @@ cursor: pointer;
     width: 60%;
     float: left;
     margin-right: 30px;
-display: flex;
-
-    
 }
 
 .recommended {
     width: calc(40% - 30px);
     float: right;
 }
-
+ 
 .section-title {
     width: 100%;
     margin-bottom: 20px;
@@ -165,7 +204,6 @@ display: flex;
     object-fit: cover;
 }
 .neighborhood-listing .last-item > .item-image {
-    width: 100%;
     height: 170px;
 }
 .neighborhood-listing .item-size {
@@ -187,28 +225,28 @@ display: flex;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(3px);
 }
-.neighborhood-listing .location {
+.neighborhood-listing .location> .fa{
+    margin-right: 10px;
 }
-.neighborhood-listing .name {
-}
+
 .btn {
-    margin-top: 3px;
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 10px;
     line-height: 18px;
-    background-color: orangered;
-    color: #fff;
+    font-size: 14px;
     text-decoration: none;
     text-transform: capitalize;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid rosybrown;
     box-shadow: 4px 5px 10px #f15b2de2
-    }
+}
 
-    .btn:hover {
-        background-color: #fff;
-        color: orangered;
-        border: 2px;
-    }
+.btn:hover {
+    background-color: #fff;
+    color: orangered;
+}
 
 
 .recommended-listing {
@@ -224,10 +262,12 @@ display: flex;
     border: 1px solid #ccc;
     border-radius: 20px;
     position: relative;
-
+    
 }
+
+
 .recommended-listing > .listing-item:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 
 }
 .recommended-listing .item-image {
@@ -258,9 +298,6 @@ display: flex;
     flex-wrap: wrap;
     gap: 5px 15px;
     font-size: 14px;
-}
-.recommended-listing .feature {
-
 }
 
 
