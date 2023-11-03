@@ -13,70 +13,80 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    
 }
 .sticky-line {
-    height: 10%;
-    top: 0px;  
-    position: fixed;
-}
-
-.main-phrase-background {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: rgb(0, 26, 102);
-    height: 50px;
-    position: fixed;
+    background-color: #001f5c;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
 }
 
 .main-phrase-text {
-    top: 0px;
-    color:aquamarine;
-    font-style: bold;
-    font-size: 40px;
-    margin: 0;
-    animation: runText 10s linear infinite;  
-    
+text-align: center;
 }
+    
+.main-phrase-text span {
+    color: aquamarine;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    animation: runText 30s linear infinite;
+    display:inline-block;
+    width: 70%;
+    text-indent: 0;
+}
+
 @keyframes runText {
-    from {
-        transform: translateX(100%); /* Начальная позиция за пределами видимой области */
+    0% {
+        transform: translateX(100%);
     }
-    to {
-        transform: translateX(-100%); /* Конечная позиция за пределами видимой области */
+    50% {
+        transform: translateX(-100%);
     }    
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .main-header {
-    display: inline-block;    
-    width: 1200px;    
-    margin: 60px calc(55% - 600px) 0px;
-    
+    display: flex;   
+    width: 100%; 
+    max-width: 1200px;    
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto 20px;
 }
-.main-header-right-side {
-    float: right;
+
+.header-content {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    
     width: 160px;
     height: 60px;
     margin-top: 0;
-}
+ }
 
 .main-menu {
-    float: right;
-    margin-top: 20px;
+    display: flex;
+    margin-top: 10px;
     margin-right: 30px;
+    height: 30px;
     
 }
-
 .menu-link {
-    display: inline;
-    
+    display:block;    
     color: #0800f2;
     font-size: 25px;
-    line-height: 20px;
+   /* line-height: 25px;*/ 
     margin-right: 30px;
     margin-left: 0px;
     text-decoration: none;
@@ -92,36 +102,19 @@ header {
     border-bottom: 3px solid rgb(0, 26, 102);
 }
 
-
-.form-sign-in {
-    float: right;
-     
-     
-    gap: 10px;
-}
-
-.form-sign-in > .filter-sign-in {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 14px;
-    background-color: #fff;
-}
-
 .form-sign-in .filter-btn {
     display: inline-block;
-  padding: 15px 25px;
-  font-size: 20px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 6px #bec9ff;    
-  background-color: rgb(30, 110, 231);
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 6px #bec9ff;    
+    background-color: rgb(30, 110, 231);
 }
 
 .form-sign-in .filter-btn:hover {
@@ -133,39 +126,280 @@ header {
     transform: translateY(4px);
 }
 
+.main {
+    width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.phone {
+    background: linear-gradient(63.04deg, #001f5c, #0c7b93);
+    display: flex;
+    flex-flow: wrap;
+    max-width: 1200px;
+    height: 832px;
+    margin: 20px auto 40px; /* Center the container horizontally */
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
 
+.img_style {
+    height: 630px;
+    transform: rotate(3deg);  
+    position: relative;
+    left: 600px;
+    top: 220px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.main-title {
+    position: absolute ;
+    top: 50px;
+    left: 60px;
+    /* border-radius: 240px 240px 240px 240px; 
+    background: radial-gradient(50% 50% at 50% 50%, #f84600, #ffffff24); 
+    transform: rotate(-45deg);*/
+    width: 1000px;
+    height: auto;
+   font-size: 70px;
+   z-index: 1;
+}
+
+.main-title1 {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    /* border-radius: 240px 240px 240px 240px; 
+    background: radial-gradient(50% 50% at 50% 50%, #f84600, #ffffff24); 
+    background: #f84600;
+    color: #fff;
+    transform: rotate(-45deg);*/
+    color: #f84600;
+    width: 500px;
+    height: auto;
+    z-index: 2;
+    font-size: 35px;
+}
+
+
+.phone-child {
+    position: absolute;
+    top: 200px;
+    left: 330px;
+    border-radius: 50px 50px 50px;
+    background: radial-gradient(30% 50% at 100% 30%, rgba(0, 255, 136, 0.622), rgba(0, 1, 1, 0));
+    width: 659px;
+    height: 659px;
+    transform: rotate(3deg);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.phone-inner {
+    position: absolute;
+    top: 356px;
+    left: 0px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(110, 20, 246), rgba(255, 82, 109, 0));
+    width: 659px;
+    height: 659px;
+    transform: rotate(3.96deg);
+    z-index: -1;
+    overflow: hidden; 
+}
+.phone-item {
+    position: absolute;
+    top: 350px;
+    left: 850px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 234, 0.462), rgba(255, 0, 81, 0));
+    width: 660px;
+    height: 660px;
+    transform: rotate(4deg);
+    z-index: -1;
+}
+
+
+.form-try-it .filter-btn {
+    position: absolute;    
+    top: 500px;
+    left: 300px;
+    padding: 15px 25px;
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 6px #bec9ff;    
+    background-color: rgb(30, 110, 231);
+    z-index: 3;
+}
+
+.form-try-it .filter-btn:hover {
+    position: absolute;    
+    background-color: rgb(13, 0, 255);
+    z-index: 3;
+    
+}
+.form-try-it .filter-btn:active {
+    position: absolute;    
+    z-index: 3;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 5px 6px #0c56f7;
+    transform: translateY(4px);
+  }
+
+.trusted {
+    width: 100%; 
+    max-width: 1200px;    
+    height: 100%;
+    margin: 20px auto 20px;
+    }
+    
+.main-title3 {
+    color: #f84600;
+    width: 1200px;
+    height: 100px;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+
+.trusted-content {
+    display: flex;   
+    justify-content: space-between;
+    width: 1200px;
+    margin: 60px auto 60px;
+    height: 100px;
+}
+
+
+.img_style1 {
+    height: auto;
+}
+
+
+.purpose {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 1080px;
+    padding: 30px;
+    margin: 20px auto 20px;
+    justify-content: center;   
+    background-color: rgba(51, 139, 255, 0.124);
+    overflow: hidden;
+    border-radius: 60px;
+     
+}
+
+.main-title4 {
+    color: #f84600;
+    width: 1200px;
+    height: 100px;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+
+.purpose-content {
+    display: flex;   
+    justify-content: space-between;
+    padding: 15px;
+    margin: 60px auto 60px;
+    height: 300px;
+    border: 2px solid #8b76ff;
+    border-radius: 10px;
+    
+}
+.img_style2 {
+    height: auto;
+    filter: blur(10px);
+}
+.img_style2:hover {
+    filter: blur();
+}
+
+
+
+.section {
+    position: relative; // устанавливаем родителя
+    overflow: hidden;
+    width: 100%; // ширина секции
+    height: 100vh; // высота секции на высоту окна
+    display: flex; // это flex-контейнер
+    justify-content: center; // горизонтальное выравнивание
+    align-items: center; // вертикальное выравнивание
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; // растянуть на всю ширину секции
+    height: 100%; // растянуть на всю высоту секции
+    background-image: url('./img/
+    background-size: cover; // масштабируется без потери пропорций
+    filter: blur(10px); // размытие фона
+    transition: 2s; // плавный переход от размытия до получения фокуса
+}
+
+.airline {
+    width: 250px; // ширина картинки
+    height: auto; // высота картинки подстроится автоматически
+    position: relative; // для корректной работы z-index
+    z-index: 1; // слой с картинкой выше слоя с фоном
+    transition: 2s; // плавный переход эффекта размытия
+}
+
+.airline:hover {
+    filter: blur(10px); // радиус размытия
+    transform: scale(1.2); // масштабирование
+    opacity: 0.5; // полупрозрачность
+    cursor: pointer;
+}
+
+.airline:hover~.bg {
+    filter: blur(0); // вернет фону резкость
+    transform: scale(1.5); // трансформирует фон в сторону увеличения
+}
 
 
 
 /*
-
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    float: right;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: red;
+.form-sign-in {
+    display: flex;
+    gap: 10px;
 }
-*/
-
-.petty {
-    
-    position: relative;
-    /* 
-    background: linear-gradient(63.04deg, #4410ff44, #023dff);
-    */
+.form-sign-in > .filter-sign-in {
     width: 100%;
-    height: 832px;
-    overflow: hidden;
-    text-align: left;
-    font-size: 22px;
-    color: #3b7cff;
-    font-family: Inter;
-
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #fff;
 }
 
-.petty-child {
+
+.on_style {
+    display: flex;
+    max-width: 1200px;
+    height: 1832px;
+    margin: 20px auto 40px;  
+    position: absolute;
+    overflow: hidden;
+}
+
+ 
+.phone-child {
     position: relative;
     top: 330px;
     left: 330px;
@@ -176,7 +410,7 @@ header {
     transform:  rotate(6deg);
     transform-origin: 0;
 }
-.petty-item {
+.phone-item {
     position: relative;
     top: -250px;
     left: 850px;
@@ -198,9 +432,7 @@ header {
     height: 236px;
 }
 
-/*
-}
-    .petty-inner {
+.phone-inner {
     position: absolute;
     top: 56.09px;
     left: 1106.17px;
@@ -212,8 +444,6 @@ header {
     transform-origin: 0 0;
 } 
 
-*/
-
 .on_style {
     position: relative;
     bottom: 0px;
@@ -222,25 +452,20 @@ header {
     height: 513px;
     object-fit: cover;
     transform:  rotate(3deg);
-    
 }
 
-.main {
-    display: inline-block;
-    width: 1200px;
-    margin: 20px calc(50% - 600px) 40px;
-}
 
-.hero {
-    width: 100%;
-    min-height: 1080px;
-    padding: 30px;
-    margin-bottom: 30px;
-    background-color: #36f;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/*
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    float: right;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: red;
 }
+*/
+/*
 
 .hero-content {
     width: 30%;
