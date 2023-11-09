@@ -1,0 +1,46 @@
+.sticky-line {
+    display: block;
+    padding: 0rem;
+    box-shadow: 0 4px 8px #0003;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff4400;
+    z-index: 1;
+}
+
+
+.sticky-line .main-phrase-text span{
+    text-align: center;
+    color: rgb(5, 10, 24);
+    align-items: center;
+    font-size: 30px;
+    animation: runText 30s linear infinite;
+    display:inline-block;
+    width: 70%;
+    text-indent: 0;
+    }
+        
+            
+    @keyframes runText {
+        0% {
+            transform: translateX(100%);
+        }
+        50% {
+            transform: translateX(-100%);
+        }    
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    
+    
+
+/*
+.main-header > .logo {
+    font-size: 2rem;
+    line-height: 1em;
+}
+.main-header > .btn {
+}*/
