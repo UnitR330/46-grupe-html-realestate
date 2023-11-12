@@ -133,17 +133,16 @@ text-align: center;
     display: flex;
 }
 .phone {
-    background: linear-gradient(63.04deg, #001f5c, #0c7b93);
+    background: linear-gradient(75deg, rgb(255 0 0 / 64%), #5bff0136);
     display: flex;
     flex-flow: wrap;
     max-width: 1200px;
     height: 832px;
     margin: 20px auto 40px; /* Center the container horizontally */
     position: relative;
-    z-index: -2;
+    z-index: 0;
     overflow: hidden;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-radius: 60px;
 }
 
 .img_style {
@@ -152,7 +151,7 @@ text-align: center;
     position: relative;
     left: 600px;
     top: 220px;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden;
 }
 
@@ -165,8 +164,8 @@ text-align: center;
     transform: rotate(-45deg);*/
     width: 1000px;
     height: auto;
-   font-size: 70px;
-   z-index: 1;
+    font-size: 70px;
+   /* z-index: 1; */
 }
 
 .main-title1 {
@@ -181,7 +180,7 @@ text-align: center;
     color: #f84600;
     width: 500px;
     height: auto;
-    z-index: 2;
+    /* z-index: 2; */
     font-size: 35px;
 }
 
@@ -195,7 +194,7 @@ text-align: center;
     width: 659px;
     height: 659px;
     transform: rotate(3deg);
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
 }
 
@@ -204,11 +203,11 @@ text-align: center;
     top: 356px;
     left: 0px;
     border-radius: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgb(110, 20, 246), rgba(255, 82, 109, 0));
+    background: radial-gradient(50% 50% at 50% 50%, rgb(20 122 246 / 74%), rgba(255, 82, 109, 0));
     width: 659px;
     height: 659px;
     transform: rotate(3.96deg);
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden; 
 }
 .phone-item {
@@ -220,7 +219,7 @@ text-align: center;
     width: 660px;
     height: 660px;
     transform: rotate(4deg);
-    z-index: -1;
+    z-index: 1;
 }
 
 
@@ -239,7 +238,7 @@ text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 6px #bec9ff;    
     background-color: rgb(30, 110, 231);
-    z-index: 3;
+    /* z-index: 1; */
 }
 
 .form-try-it .filter-btn:hover {
@@ -291,8 +290,8 @@ text-align: center;
     justify-content: center;
     filter:
 }
-    .purpose {
-
+   
+.purpose {
     width: 100%;
     max-width: 1200px;
     min-height: 1080px;
@@ -314,27 +313,46 @@ text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
     }
+    .purpose-content {
+        width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        margin: 60px auto 60px;
+        border: 2px solid #8b76ff;
+        border-radius: 10px;
 
-.purpose-content {
-    display: flex;   
-    justify-content: space-between;
-    padding: 15px;
-    margin: 60px auto 60px;
-    height: 300px;
-    border: 2px solid #8b76ff;
-    border-radius: 10px;
+    }
     
-}
-.img_style2 {
-    height: auto;
-    filter: blur(10px);
-}
-.img_style2:hover {
-    filter: blur();
-}
+    .purpose-content .image-title4 {
+        padding: 15px;
+        color: #f84600;
+        font-size: 80px;
+        text-align: center;
+        }
+    
+        .purpose-content     .image-container {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+    }
+     
+     
+     
+     
+     
+     
+    .image-container .img_style2 {
+        height: 200PX;
+        filter: blur(10px);
+        transition: filter 0.3s ease; /* Добавленный переход */
+    }
+    
+    .img_style2.blur {
+        filter: blur();
+    }
 
-
-
+     
 .section {
     position: relative; // устанавливаем родителя
     overflow: hidden;

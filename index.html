@@ -20,7 +20,7 @@
 
 <body>
     <header class="sticky-line">
-            <div class="main-phrase-text"><span>All of us know, job need yo be done in time! We help you to do so.</span></div>
+            <div class="main-phrase-text"><span>All of us know, job need to be done in time! We help you to do so.</span></div>
     </header>
     <div class="main-header"> 
         <img class="logo" src="./img/logo.png" alt="Logo">
@@ -62,21 +62,47 @@
                 <img class="img_style1" alt="" src="./img/platform5.png">    
             </div>
         </div>
+      
         <div class="purpose">
-            <h1 class="main-title4"><span style="background-color: rgba(76, 34, 193, 0); color: rgb(0, 0, 0); font-weight: bold;"> How does WAKA help?</span></h1>
+            <h1 class="main-title4">
+                <span style="background-color: rgba(76, 34, 193, 0); color: rgb(0, 0, 0); font-weight: bold;">
+                    How does WAKA help
+                </span>
+            </h1>
+        
             <div class="purpose-content">
-                <img class="img_style2" alt="" src="./img/WAKA-business.png">    
-                <img class="img_style2" alt="" src="./img/WAKA-personal1.png">    
-             </div>
+                <div class="image-container">
+                    <h3 class="image-title4" onclick="toggleImageBlur(this)">
+                        <span style="background-color: rgba(76, 34, 193, 0); color: rgb(0, 0, 0); font: 12px;">
+                            For Business
+                        </span>
+                    </h3>
+                        <img class="img_style2" alt="" src="./img/WAKA-business.png" onclick="toggleImageBlur(this)">
+                </div>
+        
+                <div class="image-container">
+                    <h3 class="image-title4" onclick="toggleImageBlur(this)">
+                        <span style="background-color: rgba(76, 34, 193, 0); color: rgb(0, 0, 0); font: 12px;">
+                            For Professionals
+                        </span>
+                    </h3>
+                        <img class="img_style2" alt="" src="./img/WAKA-personal1.png" onclick="toggleImageBlur(this)"> 
+                </div>
+            </div>
+        </div>
+        
+     
+     
             
             </section>
             
-
         
         </div>
 
     </main>
-    
+ 
+    <script src="./js/main.js"></script>
+ 
     <!-- 
 </div>
     <div class="on_style"></div>
